@@ -12,5 +12,12 @@
 |
 */
 
+$router->get(
+    '/',
+    [
+        'uses' => 'CharacterController@list',
+        'as' => 'character-list'
+    ]
+);
 
 
