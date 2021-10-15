@@ -20,4 +20,12 @@ $router->get(
     ]
 );
 
+$router->get(
+  'characters/{id}',
+    [
+        'uses' => 'CharacterController@item',
+        'as' => 'character-item'
+    ]
+);
+
 

@@ -12,4 +12,18 @@ class CharacterController extends Controller
             'characters' => Character::all()
         ]);
     }
+
+    public function item(int $id)
+    {
+        $character = Character::find($id);
+
+        if($character) {
+            return view('character', [
+                'character' => $character
+            ]);
+        } else {
+            abort(404, 'Le personnage demandé n\'existe pas ');
+        }
+
+    }
 }
