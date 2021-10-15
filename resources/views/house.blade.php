@@ -6,7 +6,7 @@
 
 <ul class="characters-list">
 
-    @foreach($house->characters as $character)
+    @forelse($house->characters as $character)
     <li class="character-card">
         <a href="{{ route('character-item', ['id' => $character->id]) }}">
 
@@ -18,7 +18,9 @@
             </div>
         </a>
     </li>
-    @endforeach
+    @empty
+    <div>Pas de personnages pour cette maison !</div>
+    @endforelse
 
 </ul>
 @endsection
