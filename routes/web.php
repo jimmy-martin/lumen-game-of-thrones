@@ -28,4 +28,12 @@ $router->get(
     ]
 );
 
+$router->get(
+    'houses/',
+    [
+        'uses' => 'HouseController@list',
+        'as' => 'house-list'
+    ]
+);
+
 
