@@ -8,7 +8,7 @@
             <li class="character-card">
                 <a href="{{ route('character-item', ['id' => $character->id]) }}">
 
-                    <div class="avatar" style="background: #e3e3e3;">
+                    <div class="avatar" style="background: #{{ $character->houses[0]->colour }};">
                         <img src="/assets/img/{{ $character->image }}" alt="{{ $character->first_name }}">
                     </div>
                     <div class="name">
