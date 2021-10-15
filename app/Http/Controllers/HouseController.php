@@ -12,4 +12,18 @@ class HouseController extends Controller
             'houses' => House::all()
         ]);
     }
+
+    public function showCharacters(int $houseId)
+    {
+        $house = House::find($houseId);
+
+        if($house) {
+            return view('house', [
+                'house' => $house
+            ]);
+        } else {
+            abort(404, 'Aucune maison correspondante !');
+        }
+
+    }
 }

@@ -36,4 +36,12 @@ $router->get(
     ]
 );
 
+$router->get(
+    'houses/{houseId}/characters',
+    [
+        'uses' => 'HouseController@showCharacters',
+        'as' => 'house-showCharacters'
+    ]
+);
+
 
