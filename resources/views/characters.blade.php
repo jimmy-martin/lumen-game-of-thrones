@@ -6,7 +6,7 @@
     @foreach($characters as $character)
 
             <li class="character-card">
-                <a href="#character/1">
+                <a href="{{ route('character-item', ['id' => $character->id]) }}">
 
                     <div class="avatar" style="background: #e3e3e3;">
                         <img src="/assets/img/{{ $character->image }}" alt="{{ $character->first_name }}">
